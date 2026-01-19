@@ -1,0 +1,113 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 模型文件 - 排除所有模型相关文件
+**/model/
+**/models/
+desensitive-service/model/
+*.pdparams
+*.pdiparams
+*.pdiparams.info
+*.pdmodel
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.pb
+*.onnx
+*.tflite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 日志文件 - 排除所有日志
+*.log
+logs/
+**/*.log
+word_processor.log
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+
+# 敏感数据目录 - 排除所有上传、输出和调试文件
+uploads/
+**/uploads/
+outputs/
+**/outputs/
+debug_outputs/
+**/debug_outputs/
+test_outputs/
+**/test_outputs/
+
+# 敏感数据文件类型 - 排除这些目录中的文档文件
+uploads/**/*.docx
+uploads/**/*.doc
+uploads/**/*.pdf
+uploads/**/*.xlsx
+uploads/**/*.xls
+uploads/**/*.pptx
+uploads/**/*.ppt
+outputs/**/*.docx
+outputs/**/*.doc
+outputs/**/*.pdf
+outputs/**/*.xlsx
+outputs/**/*.xls
+outputs/**/*.pptx
+outputs/**/*.ppt
+debug_outputs/**/*.docx
+debug_outputs/**/*.doc
+debug_outputs/**/*.pdf
+debug_outputs/**/*.xlsx
+debug_outputs/**/*.xls
+debug_outputs/**/*.pptx
+debug_outputs/**/*.ppt
+test_outputs/**/*.docx
+test_outputs/**/*.doc
+test_outputs/**/*.pdf
+test_outputs/**/*.xlsx
+test_outputs/**/*.xls
+test_outputs/**/*.pptx
+test_outputs/**/*.ppt
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.bak
+*.cache
+
+# Docker
+.dockerignore
+

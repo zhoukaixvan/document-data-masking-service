@@ -1,0 +1,30 @@
+# 核心框架
+fastapi>=0.104.0
+uvicorn>=0.24.0
+gradio==3.44
+
+# Word文档处理
+python-docx>=1.1.0
+
+# HTTP客户端
+httpx>=0.25.0
+requests>=2.31.0
+
+# 工具库
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+python-multipart>=0.0.6
+
+# 飞浆
+paddlenlp==2.6.1
+paddlepaddle==2.6.2
+
+# PDF处理
+markdown>=3.4.0
+weasyprint>=60.0
+
+Pillow>=9.1.0  # Image processing for PDF images
+fonttools>=4.0.0  # Font handling for Chinese fonts
+cssselect2>=0.8.0  # CSS selectors for styling
+tinycss2>=1.4.0  # CSS parsing
+tinyhtml5>=2.0.0  # HTML parsing

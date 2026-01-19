@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  document-masking:
+    build: .
+    container_name: document-data-masking
+    ports:
+      - "8888:8888"  # 脱敏服务
+      - "8002:8002"  # 文档处理服务
+      - "7860:7860"  # Gradio前端
+    volumes:
+      # 挂载输出目录，方便查看结果
+      - ./document-processor/outputs:/app/document-processor/outputs
+      - ./gradio-frontend/outputs:/app/gradio-frontend/outputs
+      - ./document-processor/debug_outputs:/app/document-processor/debug_outputs
+    environment:
+      - DESENSITIVE_SERVICE_URL=http://127.0.0.1:8888
+      - WORD_PROCESSOR_URL=http://127.0.0.1:8002
+      - PDF_PARSE_API_URL=${PDF_PARSE_API_URL:-http://host.docker.internal:8000}
+    restart: unless-stopped
+    # 如果需要访问宿主机的PDF解析API服务，使用host.docker.internal
+    # 或者将PDF解析API也容器化
